@@ -1,6 +1,6 @@
 # Labo Cloud · Plateforme de gestion de laboratoire
 
-Labo Cloud est une plateforme web complète destinée aux laboratoires de recherche : elle centralise la gestion des équipes, des axes scientifiques, des productions scientifiques (ouvrages, revues, brevets, rapports, thèses, habilitations), des événements (séminaires, conférences), des offres d’emploi et de la communication interne/externe.  
+Laboratoire L2IS  est une plateforme web complète destinée aux laboratoires de recherche : elle centralise la gestion des équipes, des axes scientifiques, des productions scientifiques (ouvrages, revues, brevets, rapports, thèses, habilitations), des événements (séminaires, conférences), des offres d’emploi et de la communication interne/externe.  
 Le projet est découpé en deux applications : un backend **Laravel 7 + Sanctum** et un frontend **React 18 + Vite**.  
 Référence du dépôt : [Nmouhly/Laboratoire_L2IS](https://github.com/Nmouhly/Laboratoire_L2IS.git).
 
@@ -31,7 +31,6 @@ L’API expose plus de 80 routes (voir `backend/routes/api.php`) couvrant toutes
 
 ## Diagramme d’architecture
 
-![Diagramme d’architecture](docs/architecture-diagram.png)
 
 ```mermaid
 %% Fichier source : docs/architecture-diagram.mmd
@@ -58,8 +57,6 @@ flowchart LR
     SPA --> Analytics[Chart.js / Statistiques]
 ```
 
-> Le diagramme PNG est généré à partir du fichier `docs/architecture-diagram.mmd`. Les autres captures (accueil, offres, actualités, dashboard admin, etc.) doivent être ajoutées dans `docs/` pour enrichir la documentation visuelle.
-
 ---
 
 ## Captures d’écran clés
@@ -72,7 +69,7 @@ flowchart LR
 | Détail d’une actualité | ![Actualité : partenariat](docs/news-detail.png) |
 | Dashboard admin – statistiques & publications en attente | ![Dashboard admin](docs/admin-dashboard.png) |
 
-Ces visuels peuvent être réutilisés dans les dossiers de candidature ou présentations pour illustrer rapidement l’interface et les fonctionnalités.
+
 
 ---
 
@@ -171,10 +168,8 @@ Configurer `frontend/src/helpers/config.js` pour pointer vers l’URL du backend
 
 ## Pourquoi ce projet met en valeur mon profil
 
-- **Vision produit** : j’ai transformé des besoins métiers d’un labo en modules cohérents (publications, événements, carrières, communication).
-- **Stack moderne full JS/PHP** : React 18 + Vite côté UI, Laravel 7 + Sanctum côté API, Cloudinary pour la scalabilité média.
-- **Qualité & sécurité** : séparation des rôles (visiteur, membre, admin), validation stricte, vérification de DOI, uploads sécurisés.
-- **Expérience utilisateur** : trois expériences sur mesure (public, membre, admin) partageant une base de code mutualisée.
-- **Preuves visuelles** : déposez les captures d’écran citées dans `docs/README.md` (`home-overview.png`, `job-offer-card.png`, `news-detail.png`, `home-jobs-news.png`, `admin-dashboard.png`) pour accompagner les candidatures.
-
-Cette documentation peut être incluse directement dans le dépôt Git afin de présenter le projet de manière professionnelle à des recruteurs.
+- **Vision Produit & Fonctionnelle** : J’ai transformé des besoins métiers d’un laboratoire de recherche en modules cohérents et structurés (publications, événements, carrières, communication).
+- **Stack Moderne Full JS/PHP** : Maîtrise de **React 18 + Vite** côté UI, **Laravel 7 + Sanctum** côté API, et **Cloudinary** pour la gestion média évolutive.
+- **Qualité et Sécurité (Gouvernance)** : Implémentation de la **séparation des rôles** (visiteur, membre, admin), d'une **validation stricte** (vérification de DOI) et des mécanismes d'uploads sécurisés.
+- **Workflows et Communications** : J'ai développé un **système de messagerie interne** (Inbox/Outbox) ainsi que des **flux d'e-mails externes** pour les notifications et la gestion des cycles de vie critiques (soumissions, validations).
+- **Expérience Utilisateur Multi-rôles** : Conception et développement de **trois expériences sur mesure** (public, membre, admin) partageant et optimisant une base de code mutualisée.
