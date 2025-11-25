@@ -1,6 +1,6 @@
-# Labo Cloud · Plateforme de gestion de laboratoire
+# Laboratoire L2IS · Plateforme de gestion de laboratoire
 
-Laboratoire L2IS  est une plateforme web complète destinée aux laboratoires de recherche : elle centralise la gestion des équipes, des axes scientifiques, des productions scientifiques (ouvrages, revues, brevets, rapports, thèses, habilitations), des événements (séminaires, conférences), des offres d’emploi et de la communication interne/externe.  
+Laboratoire L2IS est une plateforme web complète destinée aux laboratoires de recherche : elle centralise la gestion des équipes, des axes scientifiques, des productions scientifiques (ouvrages, revues, brevets, rapports, thèses, habilitations), des événements (séminaires, conférences), des offres d’emploi et de la communication interne/externe.  
 Le projet est découpé en deux applications : un backend **Laravel 7 + Sanctum** et un frontend **React 18 + Vite**.  
 Référence du dépôt : [Nmouhly/Laboratoire_L2IS](https://github.com/Nmouhly/Laboratoire_L2IS.git).
 
@@ -24,6 +24,7 @@ Référence du dépôt : [Nmouhly/Laboratoire_L2IS](https://github.com/Nmouhly/L
 | Backend | Laravel 7, Sanctum, Cloudinary Laravel SDK, MySQL | API RESTful, gestion des rôles, modération, stockage sécurisé des données. |
 | Authentification | Sanctum + stockage sécurisé du token côté client | Sessions stateless pour SPA, middlewares `auth:sanctum`, `ApiAdminMiddleware`, `ApiUserMiddleware`. |
 | Média & Assets | Cloudinary, Storage Laravel (public disk) | Uploads de photos membres, visuels d’événements, pièces jointes. |
+| Communications | Laravel Mail, Messagerie interne (API) | E-mails transactionnels (bienvenue, notifications), système de messagerie interne avec Inbox/Outbox. |
 
 L’API expose plus de 80 routes (voir `backend/routes/api.php`) couvrant toutes les entités métier : utilisateurs, membres, axes, publications, événements, offres, messages, statistiques, etc.
 
@@ -68,6 +69,8 @@ flowchart LR
 | Carte « Développeur Full Stack Senior » | ![Offre d’emploi](docs/job-offer-card.png) |
 | Détail d’une actualité | ![Actualité : partenariat](docs/news-detail.png) |
 | Dashboard admin – statistiques & publications en attente | ![Dashboard admin](docs/admin-dashboard.png) |
+| E-mail de bienvenue – notification d’inscription | ![E-mail de bienvenue](docs/email_accueil.png) |
+| Messagerie interne – détail d’un message | ![Messagerie interne](docs/message_interne.png) |
 
 
 
@@ -86,8 +89,10 @@ flowchart LR
   - Pages publiques thématiques (`/evenements`, `/seminar`, `/conferences`, etc.).
 - **Opportunités & carrières**
   - Publication d’offres d’emploi, détail accessible aux visiteurs, formulaires admin pour CRUD.
-- **Messagerie interne**
-  - Inbox/Outbox, marquage lu/non lu (`MessageController`), visibilité filtrée par rôle.
+- **Messagerie interne & notifications**
+  - Système de messagerie interne complet : Inbox/Outbox, marquage lu/non lu, réponse directe depuis l'interface (`MessageController`).
+  - Envoi d'e-mails transactionnels (bienvenue, notifications de validation/rejet) via Laravel Mail avec templates personnalisés.
+  - Visibilité filtrée par rôle et gestion des conversations entre membres et administrateurs.
 - **Portails dédiés**
   - **Public** : site vitrine responsive (pages `Home`, `Equipes`, `Publications`, etc.).
   - **Membre** : espace personnel (`/user/*`) pour gérer profil et soumissions.
@@ -171,5 +176,5 @@ Configurer `frontend/src/helpers/config.js` pour pointer vers l’URL du backend
 - **Vision Produit & Fonctionnelle** : J’ai transformé des besoins métiers d’un laboratoire de recherche en modules cohérents et structurés (publications, événements, carrières, communication).
 - **Stack Moderne Full JS/PHP** : Maîtrise de **React 18 + Vite** côté UI, **Laravel 7 + Sanctum** côté API, et **Cloudinary** pour la gestion média évolutive.
 - **Qualité et Sécurité (Gouvernance)** : Implémentation de la **séparation des rôles** (visiteur, membre, admin), d'une **validation stricte** (vérification de DOI) et des mécanismes d'uploads sécurisés.
-- **Workflows et Communications** : J'ai développé un **système de messagerie interne** (Inbox/Outbox) ainsi que des **flux d'e-mails externes** pour les notifications et la gestion des cycles de vie critiques (soumissions, validations).
+- **Workflows et Communications** : J'ai développé un **système de messagerie interne** complet (Inbox/Outbox avec interface de réponse intégrée) ainsi que des **flux d'e-mails transactionnels** (Laravel Mail) pour les notifications d'inscription, de validation/rejet de publications, et la gestion des cycles de vie critiques. Ces fonctionnalités améliorent la collaboration et la traçabilité des échanges.
 - **Expérience Utilisateur Multi-rôles** : Conception et développement de **trois expériences sur mesure** (public, membre, admin) partageant et optimisant une base de code mutualisée.
