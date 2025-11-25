@@ -29,6 +29,39 @@ L’API expose plus de 80 routes (voir `backend/routes/api.php`) couvrant toutes
 
 ---
 
+## Diagramme d’architecture
+
+![Diagramme d’architecture](docs/architecture-diagram.png)
+
+```mermaid
+%% Fichier source : docs/architecture-diagram.mmd
+flowchart LR
+    subgraph Clients
+        V[Visiteurs]
+        M[Membres]
+        A[Administrateurs]
+    end
+
+    V & M & A --> SPA[Frontend React 18 / Vite<br/>AuthContext + React Router]
+    SPA <--> API[API REST Laravel 7<br/>Sanctum + Policies + FormRequest]
+
+    subgraph Services
+        DB[(MySQL)]
+        Storage[(Laravel Storage<br/>+ Cloudinary)]
+        Mail[Mailers / Notifications]
+    end
+
+    API <--> DB
+    API --> Storage
+    API --> Mail
+
+    SPA --> Analytics[Chart.js / Statistiques]
+```
+
+> Le diagramme PNG est généré à partir du fichier `docs/architecture-diagram.mmd`. Les autres captures (accueil, offres, actualités, dashboard admin, etc.) doivent être ajoutées dans `docs/` pour enrichir la documentation visuelle.
+
+---
+
 ## Modules fonctionnels clés
 
 - **Gestion des membres & équipes**
@@ -128,5 +161,6 @@ Configurer `frontend/src/helpers/config.js` pour pointer vers l’URL du backend
 - **Stack moderne full JS/PHP** : React 18 + Vite côté UI, Laravel 7 + Sanctum côté API, Cloudinary pour la scalabilité média.
 - **Qualité & sécurité** : séparation des rôles (visiteur, membre, admin), validation stricte, vérification de DOI, uploads sécurisés.
 - **Expérience utilisateur** : trois expériences sur mesure (public, membre, admin) partageant une base de code mutualisée.
+- **Preuves visuelles** : déposez les captures d’écran citées dans `docs/README.md` (`home-overview.png`, `job-offer-card.png`, `news-detail.png`, `home-jobs-news.png`, `admin-dashboard.png`) pour accompagner les candidatures.
 
 Cette documentation peut être incluse directement dans le dépôt Git afin de présenter le projet de manière professionnelle à des recruteurs.

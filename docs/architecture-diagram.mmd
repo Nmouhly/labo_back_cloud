@@ -1,0 +1,34 @@
+flowchart LR
+    subgraph Client["Frontends React"]
+        Public["Visiteur (Home, News, Jobs)"]
+        Member["Portal Membre (/user/*)"]
+        Admin["Dashboard Admin (/dashboard/*)"]
+    end
+
+    subgraph API["API REST Laravel 7"]
+        Auth["Auth & Middleware (Sanctum, Api*Middleware)"]
+        Domain["Domain Controllers\n(Members, Publications, Events, Jobs, Messages)"]
+        Services["Services & Policies\n(Validation, DOI check, Cloudinary uploads)"]
+    end
+
+    subgraph Data["Persistance & Services"]
+        DB[(MySQL / MariaDB)]
+        Storage["Laravel Storage\n(public disk)"]
+        Cloudinary["Cloudinary Media CDN"]
+    end
+
+    Client -->|Axios + JSON| Auth
+    Auth --> Domain
+    Domain --> Services
+    Domain --> DB
+    Domain --> Storage
+    Services --> Cloudinary
+
+    subgraph Observability["Support & Ops"]
+        Logging["Monolog Logs"]
+        Tests["PHPUnit / Feature tests"]
+    end
+
+    Domain --> Logging
+    Auth --> Tests
+
