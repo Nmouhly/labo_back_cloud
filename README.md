@@ -62,6 +62,20 @@ flowchart LR
 
 ---
 
+## Captures d’écran clés
+
+| Vue | Aperçu |
+| --- | --- |
+| Page d’accueil – présentation du laboratoire | ![Présentation du L2IS](docs/home-overview.png) |
+| Page d’accueil – actualités & offres | ![Actualités et offres](docs/home-jobs-news.png) |
+| Carte « Développeur Full Stack Senior » | ![Offre d’emploi](docs/job-offer-card.png) |
+| Détail d’une actualité | ![Actualité : partenariat](docs/news-detail.png) |
+| Dashboard admin – statistiques & publications en attente | ![Dashboard admin](docs/admin-dashboard.png) |
+
+Ces visuels peuvent être réutilisés dans les dossiers de candidature ou présentations pour illustrer rapidement l’interface et les fonctionnalités.
+
+---
+
 ## Modules fonctionnels clés
 
 - **Gestion des membres & équipes**
