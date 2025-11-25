@@ -1,0 +1,86 @@
+/* Conteneur principal */
+.ouvrages-list {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Titre principal */
+.ouvrages-list h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+/* Liste des ouvrages */
+.ouvrages-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Élément de liste */
+.ouvrages-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Puce personnalisée pour chaque ouvrage */
+.ouvrages-list li::before {
+  content: '•';
+  color: #02213a;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Style pour le titre d'ouvrage */
+.ouvrages-list strong {
+  color: #02213a;
+}
+
+/* Style pour l'image de profil */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style pour les liens DOI */
+.doi-link {
+  margin-left: 10px;
+  color: #21a9bb; /* Couleur mise à jour */
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.doi-link:hover {
+  color: #6baedc; /* Une couleur légèrement plus foncée au survol */
+  text-decoration: none;
+}
+
+/* Style pour les liens PDF */
+.pdf-link {
+  margin-left: 10px;
+  color: #008496; /* Couleur mise à jour */
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.pdf-link:hover {
+  color: #6baedc; /* Une couleur légèrement plus foncée au survol */
+  text-decoration: none;
+}
+
+/* Style pour les erreurs */
+.error {
+  color: red;
+  font-weight: bold;
+}

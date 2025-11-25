@@ -1,0 +1,17 @@
+/* styles/statistiques.css */
+
+.stat-card {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .stat-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+  }
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+  }

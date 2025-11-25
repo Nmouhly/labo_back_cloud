@@ -1,0 +1,76 @@
+.patents-page {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.patents-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.patents-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Toujours deux colonnes */
+    gap: 40px; /* Augmenter l'espace entre les cartes */
+}
+
+.patent-card {
+    background-color: #f9f9f9;
+    padding: 30px; /* Augmenter l'espace à l'intérieur de chaque carte */
+    margin: 20px 0;
+    border-radius: 10px; /* Bordures arrondies pour un style plus moderne */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    width: 100%;
+}
+
+.patent-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.patent-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.doi-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.doi-link:hover {
+    text-decoration: underline;
+}
+
+.no-doi {
+    font-style: italic;
+    color: #666;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .patents-page {
+        padding: 10px;
+    }
+
+    .patents-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    }
+
+    .patent-card {
+        max-width: 100%;
+    }
+}

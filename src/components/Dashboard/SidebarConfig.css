@@ -1,0 +1,80 @@
+/* SidebarConfig.css */
+
+.sidebar-config-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-config-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-config-container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-config-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-config-container li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-config-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .sidebar-config-container span {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .sidebar-config-container ul ul {
+    padding-left: 20px;
+  }
+  
+  .sidebar-config-container ul ul li {
+    margin-bottom: 5px;
+  }
+  
+  .sidebar-config-container .save-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-config-container .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sidebar-config-container .save-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .sidebar-config-container p.message {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+  }

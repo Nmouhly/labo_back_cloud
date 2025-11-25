@@ -1,0 +1,25 @@
+.user-ouvrage-container {
+    padding: 20px;
+  }
+  
+  .ouvrage-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .ouvrage-list {
+    margin-top: 20px;
+  }
+  
+  .ouvrage-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }

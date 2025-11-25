@@ -1,0 +1,121 @@
+/* Assure que le conteneur principal prend toute la hauteur de l'écran */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Prend toute la hauteur de l'écran */
+  background-color: #f8f9fa; /* Couleur de fond du layout */
+}
+
+/* Style principal du conteneur */
+#layoutSidenav_content {
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  padding: 0; /* Supprime le padding par défaut */
+  background-color: #f8f9fa; /* Correspond à la couleur de fond */
+}
+
+/* Style pour le conteneur des publications */
+.publications-en-attente {
+  max-width: 800px; /* Largeur maximale du conteneur */
+  width: 100%; /* Prend toute la largeur disponible */
+  background-color: #ffffff; /* Fond blanc */
+  padding: 20px; /* Espacement interne */
+  margin: 0px; /* Espacement externe */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour du conteneur */
+  border-radius: 8px; /* Arrondit les coins */
+  text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style du titre des ouvrages en attente */
+.publications-en-attente h2 {
+  font-size: 1.5rem; /* Taille de police */
+  font-weight: bold; /* Poids de police */
+  margin-bottom: 1rem; /* Espace en dessous du titre */
+  color: #333333; /* Couleur du texte */
+}
+
+/* Style pour les éléments de la liste des ouvrages */
+.publications-en-attente ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Supprime le padding */
+  margin: 0; /* Supprime la marge */
+}
+
+.publications-en-attente li {
+  border: 1px solid #dddddd; /* Bordure des éléments */
+  background-color: #f9f9f9; /* Fond des éléments */
+  padding: 16px; /* Espacement interne des éléments */
+  border-radius: 4px; /* Arrondi les coins */
+  margin-bottom: 16px; /* Espace entre les éléments */
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: column; /* Affiche les éléments en colonne */
+}
+
+/* Style pour le texte et les boutons */
+.publications-en-attente strong {
+  font-size: 1.1rem; /* Taille de la police */
+  color: #333333; /* Couleur du texte */
+}
+
+.publications-en-attente span {
+  display: block; /* Affiche en bloc */
+  margin-top: 8px; /* Espacement au-dessus */
+  color: #555555; /* Couleur du texte */
+}
+
+.publications-en-attente a {
+  color: #1a73e8; /* Couleur du lien */
+  text-decoration: none; /* Supprime la décoration du lien */
+}
+
+.publications-en-attente a:hover {
+  text-decoration: underline; /* Souligne le lien au survol */
+}
+
+/* Style pour les boutons */
+.publications-en-attente button {
+  padding: 8px 16px; /* Espacement interne des boutons */
+  border-radius: 4px; /* Arrondi les coins */
+  border: none; /* Supprime la bordure */
+  cursor: pointer; /* Curseur de pointeur */
+  transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.publications-en-attente .bg-blue-500 {
+  background-color: #1a73e8; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte */
+}
+
+.publications-en-attente .bg-blue-500:hover {
+  background-color: #135bb4; /* Couleur de fond au survol */
+}
+
+.publications-en-attente .bg-gray-300 {
+  background-color: #e0e0e0; /* Couleur de fond du bouton */
+  color: #333333; /* Couleur du texte */
+}
+
+.publications-en-attente .bg-gray-300:hover {
+  background-color: #bdbdbd; /* Couleur de fond au survol */
+}
+
+/* Styles spécifiques pour l'élément principal */
+main {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  display: flex; /* Utilisation de flexbox */
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  flex-grow: 1; /* Prend toute l'espace vertical */
+  padding: 20px; /* Espacement interne */
+}
+
+/* Style pour le pied de page */
+footer {
+  background-color: #ffffff; /* Fond blanc */
+  padding: 0px; /* Espacement interne */
+  text-align: center; /* Centre le texte */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Ombre au-dessus */
+}

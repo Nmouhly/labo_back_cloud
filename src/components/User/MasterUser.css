@@ -1,0 +1,48 @@
+/* Assurez-vous que le conteneur principal occupe toute la hauteur de l'écran */
+.sb-nav-fixed {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; Hauteur totale de la vue */
+    margin-left: 200px;
+  }
+  
+  /* Style pour la partie principale de la mise en page */
+  #layoutSidenav {
+    display: flex;
+    height: 100%; /* Hauteur totale de la mise en page */
+  }
+  
+  /* Style pour la sidebar */
+  #layoutSidenav_nav {
+    flex: 0 0 250px; /* Largeur fixe pour la sidebar */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+  }
+  
+  /* Style pour masquer la barre de défilement tout en permettant le défilement */
+  #layoutSidenav_nav::-webkit-scrollbar {
+    width: 0; /* Masquer la barre de défilement */
+  }
+  
+  #layoutSidenav_nav {
+    scrollbar-width: none; /* Pour Firefox */
+  }
+  
+  /* Style pour le contenu principal */
+  #layoutSidenav_content {
+    flex: 1; /* Prend tout l'espace restant */
+    overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+  }
+  
+  /* Style pour masquer la barre de défilement tout en permettant le défilement */
+  #layoutSidenav_content::-webkit-scrollbar {
+    width: 0; /* Masquer la barre de défilement */
+  }
+  
+  #layoutSidenav_content {
+    scrollbar-width: none; /* Pour Firefox */
+  }
+  
+  /* Style pour le contenu principal dans les éléments enfants */
+  main {
+    padding: 1rem; /* Ajoute un peu d'espace intérieur */
+  }

@@ -1,0 +1,31 @@
+/* src/components/Membres.css */
+.members-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-collapse: collapse;
+}
+
+.members-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.members-table th, .members-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.members-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.members-table td {
+  vertical-align: middle;
+}
+.members-table h1 {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}

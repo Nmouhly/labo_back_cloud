@@ -1,0 +1,38 @@
+/* Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    height: 60px;
+    overflow-y: hidden;
+    overflow-x: hidden; /* Add this property to prevent horizontal scrolling */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+  
+  .toggle-sidebar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .toggle-sidebar-icon {
+    width: 30px;
+   height: 30px;
+  }

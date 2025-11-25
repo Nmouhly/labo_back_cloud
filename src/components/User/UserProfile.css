@@ -1,0 +1,80 @@
+/* UserProfile.css */
+
+/* Import the Pacifico font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.user-profile {
+    text-align: center;
+   
+    position: relative;
+    margin-bottom: 100px;
+
+}
+.admin-profile {
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+   
+    margin-left: -60px;
+
+}
+
+.greeting {
+    font-size: 3rem; /* Taille du texte */
+    font-weight: bold;
+    
+    font-family: 'Pacifico', cursive; /* Applique la police cursive */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte excédentaire */
+    position: absolute; /* Positionne l'élément relativement à son conteneur */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste la position pour qu'elle soit exactement au centre */
+    border-right: 0.15em solid #333; /* Ajoute une bordure à droite pour simuler le curseur de frappe */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite, moveToCenter 4s forwards;
+}
+.hi{margin-left: 170px;
+}
+.greetingAdmin {
+    font-size: 3rem; /* Taille du texte */
+    font-weight: bold;
+    
+    
+    font-family: 'Pacifico', cursive; /* Applique la police cursive */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte excédentaire */
+    position: absolute; /* Positionne l'élément relativement à son conteneur */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajuste la position pour qu'elle soit exactement au centre */
+    border-right: 0.15em solid #333; /* Ajoute une bordure à droite pour simuler le curseur de frappe */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite, moveToCenter 4s forwards;
+}
+
+/* Animation de frappe pour le texte */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation du curseur de frappe clignotant */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+}
+
+/* Animation pour déplacer le texte au centre */
+@keyframes moveToCenter {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}

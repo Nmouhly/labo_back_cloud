@@ -1,0 +1,46 @@
+.habilitation-container {
+  padding: 20px;
+}
+
+.habilitation-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Assurez-vous que cela correspond aux thèses */
+  gap: 20px; /* Espacement entre les éléments */
+  list-style-type: none;
+  padding: 0;
+}
+
+.habilitation-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet d'élévation */
+}
+
+.habilitation-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.habilitation-logo {
+  width: 80px; /* S'assurer que cela soit le même que pour Thèses */
+  height: auto;
+}
+
+.habilitation-content {
+  padding: 15px; /* Assurez-vous que cela soit le même que pour Thèses */
+}
+
+.habilitation-info {
+  margin: 5px 0; /* Espacement pour les informations */
+}
+
+.habilitation-info a {
+  color: #007bff;
+  text-decoration: none; /* Pour un lien non souligné par défaut */
+}

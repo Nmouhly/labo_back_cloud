@@ -1,0 +1,45 @@
+.these-container {
+  padding: 20px;
+}
+
+.these-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  gap: 20px; /* Espacement entre les éléments */
+  list-style-type: none;
+  padding: 0;
+}
+
+.these-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.these-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.these-logo {
+  width: 80px;
+  height: auto;
+}
+
+.these-content {
+  padding: 15px;
+}
+
+.these-info {
+  margin: 5px 0;
+}
+
+.these-info a {
+  color: #007bff;
+  text-decoration: none;
+}

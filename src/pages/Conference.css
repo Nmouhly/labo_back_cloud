@@ -1,0 +1,113 @@
+.conference-container {
+    padding: 20px;
+    max-width: 1000px; /* Réduit la largeur maximale du conteneur */
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.conference-container h1 {
+    text-align: center;
+    margin-bottom: 40px; /* Augmente l'espace sous le titre */
+    font-size: 2.5rem;
+    color: #333;
+    position: relative; /* Pour positionner la ligne */
+}
+
+.conference-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Positionne la ligne sous le titre */
+    left: 50%;
+    transform: translateX(-50%); /* Centre la ligne horizontalement */
+    width: 25%; /* Largeur de la ligne */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #d7005a; /* Couleur de la ligne */
+    border-radius: 2px; /* Bords légèrement arrondis */
+}
+
+.conference-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Réduit l'espace entre les cartes */
+}
+
+.conference-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Réduit le rayon des coins pour un look plus compact */
+    padding: 0; /* Supprime le padding pour mieux contrôler l'espacement */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Assure que le contenu ne dépasse pas les limites du cadre */
+    height: 350px; /* Ajuste la hauteur du cadre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transitions douces pour l'effet au survol */
+    margin-top: 20px; /* Ajoute de l'espace au-dessus des cartes */
+}
+
+.conference-card:hover {
+    transform: translateY(-8px); /* Lève la carte au survol */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* Ombre renforcée au survol */
+}
+
+.conference-image {
+    width: 100%;
+    height: 60%; /* L'image occupe 60% de la hauteur de la carte */
+    object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+    border-bottom: 1px solid #ddd; /* Bordure pour séparer l'image et le contenu */
+}
+
+.conference-content {
+    padding: 15px; /* Ajuste le padding pour un look plus compact */
+    height: 40%; /* La zone de contenu occupe les 40% restants de la hauteur de la carte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conference-location {
+    color: #d7005a;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.conference-card h3 {
+    font-size: 1.4rem; /* Réduit légèrement la taille de la police */
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: bold;
+}
+
+.conference-date {
+    font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.conference-location-icon {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+p,h3{padding-left: 25px;}
+.conference-location-icon::before {
+    content: '📍';
+    margin-right: 5px;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .conference-list {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    }
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}

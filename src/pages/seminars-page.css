@@ -1,0 +1,103 @@
+/* seminars-page.css */
+
+.seminars-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+.titlee {
+    margin-left:200px;
+    border-bottom:2px solid #d7005a; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px;
+    Width:500px;
+  }
+.seminars-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.seminars-page h2 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    position: relative;
+    color: #333;
+}
+
+.seminars-page h2::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: #B0E0E6;
+    margin-top: 5px;
+}
+
+.seminars-page p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.seminars-page .error {
+    color: red;
+    font-weight: bold;
+}
+
+.ongoing, .completed {
+    margin-bottom: 40px;
+}
+
+.seminar-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.seminar-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.seminar-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.seminar-card strong {
+    font-weight: bold;
+}
+
+.ongoing p, .completed p {
+    font-style: italic;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .seminars-page {
+        padding: 10px;
+    }
+    
+    .seminars-page h1 {
+        font-size: 2rem;
+    }
+
+    .seminars-page h2 {
+        font-size: 1.5rem;
+    }
+    
+    .seminar-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .seminar-card p {
+        font-size: 0.9rem;
+    }
+}

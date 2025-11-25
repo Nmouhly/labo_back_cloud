@@ -1,0 +1,39 @@
+.admin-members {
+  margin: 20px;
+}
+
+.admin-members form {
+  margin-bottom: 20px;
+}
+
+.admin-members form input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.admin-members form button {
+  padding: 5px 10px;
+}
+
+.admin-members table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-members table, .admin-members th, .admin-members td {
+  border: 1px solid #ddd;
+}
+
+.admin-members th, .admin-members td {
+  padding: 10px;
+  text-align: left;
+}
+
+.admin-members th {
+  background-color: #f4f4f4;
+}
+
+.admin-members .error {
+  color: red;
+  margin-bottom: 20px;
+}

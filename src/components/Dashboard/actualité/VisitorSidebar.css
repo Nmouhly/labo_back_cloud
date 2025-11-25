@@ -1,0 +1,123 @@
+.visitor-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, #B0E0E6, #87CEFA);
+  color: #fff;
+  position: fixed;
+  height: 100%;
+  max-height: 100vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  transition: width 0.5s ease, opacity 0.5s ease; 
+  opacity: 1;
+}
+
+.visitor-sidebar.hidden {
+  width: 0;
+  opacity: 0;
+  overflow: hidden; 
+}
+
+.visitor-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.visitor-sidebar::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.visitor-sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.visitor-sidebar .logo {
+  width: 120px;
+  margin: 0 auto 30px;
+  margin-top: 30px;
+}
+
+.visitor-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.visitor-sidebar ul li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.visitor-sidebar ul li a,
+.visitor-sidebar ul li button {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 15px;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.visitor-sidebar ul li a:hover,
+.visitor-sidebar ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+.submenu.open {
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.submenu li {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.submenu.open li {
+  opacity: 1;
+}
+
+.submenu-toggle {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.submenu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.visitor-sidebar ul li.no-indent {
+  margin-left: 0;
+}
+
+.visitor-sidebar ul li.no-indent .submenu {
+  margin-left: 15px;
+}

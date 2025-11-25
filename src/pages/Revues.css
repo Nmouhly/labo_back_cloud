@@ -1,0 +1,54 @@
+.revues-list {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.revues-list h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.revues-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.revues-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+.revues-list li::before {
+  content: '•';
+  color: #02213a;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.revues-list strong {
+  color: #02213a;
+}
+
+.pdf-link {
+  margin-left: 10px;
+  color: #d9534f;
+  text-decoration: underline;
+}
+
+.pdf-link:hover {
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
